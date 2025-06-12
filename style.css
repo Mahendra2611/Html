@@ -281,6 +281,7 @@ h .container {
 .main-content {
   padding: 40px 40px;
   min-height: 60vh;
+  background: #faf9f9;
 }
 
 .page-title {
