@@ -1,0 +1,541 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+h .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-wrapper {
+  position: relative;
+  width: 100%;
+  transition: transform 0.3s ease-out;
+  z-index: 10;
+}
+
+.top-banner {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  font-size: 14px;
+  z-index: 11;
+}
+
+.banner-prev,
+.banner-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px 15px;
+}
+
+.banner-prev {
+  left: 20px;
+}
+
+.banner-next {
+  right: 20px;
+}
+
+/* Header */
+.header {
+  position: relative;
+  background: white;
+  padding: 25px 50px;
+  top: 0;
+  transition: transform 0.4s ease, border-bottom 0.3s ease;
+  height: 158.5px;
+  border-bottom: 0 solid transparent;
+  z-index: 10;
+  width: 100%;
+}
+
+.header.hide-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header.show-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header:hover {
+  border-bottom: 1px solid #eee;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown-arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.nav-item:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: fixed;
+  top: 190px;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #eee;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 40px;
+}
+
+.dropdown-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.dropdown-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-section li {
+  margin-bottom: 12px;
+}
+
+.dropdown-section a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.dropdown-section a:hover {
+  color: #333;
+}
+
+.dropdown-images {
+  display: flex;
+  gap: 20px;
+}
+
+.dropdown-image-item {
+  text-align: center;
+}
+
+.dropdown-image-item img {
+  width: 140px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.dropdown-image-item h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-actions button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.country-selector {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.header-wrapper.show-up ~ .main-content,
+.header-wrapper.hide-up ~ .main-content {
+  padding-top: 200px;
+}
+
+.main-content {
+  padding: 40px 40px;
+  min-height: 60vh;
+}
+
+.page-title {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: none;
+  transition: none;
+}
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 320px;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+.main-img {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hover-img {
+  opacity: 0;
+  z-index: 2;
+}
+
+.img-wrapper:hover .main-img {
+  opacity: 0;
+}
+
+.img-wrapper:hover .hover-img {
+  opacity: 1;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 20px 5px;
+  color: #333;
+}
+
+.product-card .price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  padding: 0 20px 20px;
+}
+
+.pagination-section {
+  text-align: center;
+}
+
+/* Pagination */
+.pagination-section {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.showing-text {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.load-more-btn {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.logo img {
+  height: 118.5px;
+  width: 100%;
+  object-fit: contain; /* optional: keeps the image from distorting */
+}
+
+.load-more-btn:hover {
+  background: #333;
+}
+
+/* Footer */
+.footer {
+  background: #f8f9fa;
+  padding: 60px 0 30px;
+  border-top: 1px solid #eee;
+  position: relative;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section li {
+  margin-bottom: 12px;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #333;
+}
+
+.newsletter p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.subscribe-btn {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.subscribe-btn:hover {
+  background: #333;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #333;
+}
+
+.follow-shop-btn {
+  background: #8b5cf6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 10px;
+}
+
+.payment-methods img {
+  height: 24px;
+  width: auto;
+}
+
+.copyright {
+  color: #666;
+  font-size: 14px;
+}
+
+/* WhatsApp Chat */
+.whatsapp-chat {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25d366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+  z-index: 1000;
+}
+
+.whatsapp-chat:hover {
+  background: #20b358;
+}
+
+.whatsapp-icon {
+  font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+
+  .dropdown-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .dropdown-menu {
+    min-width: 300px;
+    right: 0;
+    left: auto;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .page-title {
+    font-size: 32px;
+  }
+
+  .results-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+}
