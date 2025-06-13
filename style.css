@@ -35,7 +35,7 @@ h .container {
   text-align: center;
   padding: 20px 0;
   position: relative;
-  font-size: 24px;
+  font-size: 16px;
   z-index: 11;
 }
 
@@ -68,7 +68,7 @@ h .container {
 
 @media (max-width: 768px) {
   :root {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 
@@ -88,7 +88,7 @@ h .container {
   border-bottom: 0 solid transparent;
   z-index: 10;
   width: 100%;
-  font-size: 1.125rem; /* 18px */
+  font-size: 1; /* 18px */
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
@@ -110,7 +110,10 @@ h .container {
   justify-content: space-between;
 }
 
-
+/* .header .container .logo {
+ height: 50px;
+ width: 50px;
+}  */
 .main-nav {
   display: flex;
   gap: 40px;
@@ -286,7 +289,11 @@ h .container {
 .country-selector.open .country-list {
   display: block;
 }
-
+@media (max-width: 768px) {
+ .nav-item{
+  display:none;
+ }
+}
 
 /* Main Content */
 
