@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
 
 body {
@@ -10,6 +11,8 @@ body {
   color: #333;
   width: 100%;
   overflow-x: hidden;
+ 
+  /* border: 2px solid green; */
 }
 
 .activewear-text {
@@ -55,7 +58,8 @@ body.no-scroll {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  width: 100vw;
+  width: 100%;
+  
 }
 
 .banner-text {
@@ -83,7 +87,7 @@ body.no-scroll {
   transition: transform 0.4s ease, border-bottom 0.3s ease;
   border-bottom: 1px solid #eee;
   z-index: 10;
-  width: 100vw;
+  width: 100%;
   font-size: 16px;
   font-family: "Inter", sans-serif;
   line-height: 16px;
@@ -669,7 +673,7 @@ body.no-scroll {
   color: #fff;
   font-weight: 700;
   border: none;
-  border-radius: 999px; /* Fully rounded */
+  border-radius: 999px; 
   cursor: pointer;
   font-size: 14px;
   letter-spacing: 0.5px;
@@ -684,6 +688,48 @@ body.no-scroll {
   flex-direction: row;
   gap: 1rem;
 }
+.whatsapp-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: white;
+  color: black;
+  padding: 10px 16px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-chat a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.whatsapp-chat i {
+  font-size: 20px;
+}
+
+.whatsapp-chat span {
+  font-size: 15px;
+  font-weight: 500;
+}
+.fa-whatsapp{
+  background: green;
+  color: white;
+  border-radius: 100%;
+}
+.whatsapp-chat:hover {
+  transform: scale(1.05);
+}
+
 @media (max-width: 400px) {
   .load-more-btn {
     width: 100%;
@@ -904,6 +950,7 @@ body.no-scroll {
 @media (max-width: 480px) {
   .footer {
     padding: 15px;
+    /* border: 2px solid red; */
   }
 
   .footer-top {
@@ -928,16 +975,20 @@ body.no-scroll {
     font-size: 14px;
     margin-bottom: 12px;
   }
-
+  .subscribe-column{
+    border: 2px solid gree;
+  }
   .subscribe-column input {
     padding: 12px;
     margin-bottom: 12px;
     font-size: 14px;
+    width: 100%;
   }
 
   .subscribe-column button {
     padding: 15px;
     font-size: 14px;
+     width: 100%;
   }
 
   .footer-social {
