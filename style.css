@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- 
 }
 
 body {
@@ -11,7 +10,7 @@ body {
   color: #333;
   width: 100%;
   overflow-x: hidden;
- 
+
   /* border: 2px solid green; */
 }
 
@@ -59,7 +58,6 @@ body.no-scroll {
   align-items: center;
   gap: 1rem;
   width: 100%;
-  
 }
 
 .banner-text {
@@ -164,7 +162,7 @@ body.no-scroll {
 .dropdown-menu {
   position: fixed;
   overflow-y: scroll;
-  top: clamp(80px, 25vw, 100px);
+  top: clamp(80px, 25vw, 180px);
   left: 0;
   right: 0;
   background: white;
@@ -584,7 +582,6 @@ body.no-scroll {
   display: flex;
   gap: clamp(0.15rem, 1vw, 0.5rem);
   flex-wrap: wrap;
-  
 }
 
 .product-card .sizes span {
@@ -673,17 +670,16 @@ body.no-scroll {
   color: #fff;
   font-weight: 700;
   border: none;
-  border-radius: 999px; 
+  border-radius: 999px;
   cursor: pointer;
   font-size: 14px;
   letter-spacing: 0.5px;
-  
 }
 
 .load-more-btn:hover {
   background-color: #333;
 }
-.footer-group{
+.footer-group {
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -721,7 +717,7 @@ body.no-scroll {
   font-size: 15px;
   font-weight: 500;
 }
-.fa-whatsapp{
+.fa-whatsapp {
   background: green;
   color: white;
   border-radius: 100%;
@@ -736,7 +732,6 @@ body.no-scroll {
     max-width: 220px;
   }
 }
-
 
 .footer {
   background-color: #fff;
@@ -853,7 +848,7 @@ body.no-scroll {
   font-weight: 500;
   transition: background-color 0.3s ease;
 }
-.fa-heart{
+.fa-heart {
   margin-right: 10px;
 }
 .follow-shop:hover {
@@ -975,7 +970,7 @@ body.no-scroll {
     font-size: 14px;
     margin-bottom: 12px;
   }
-  .subscribe-column{
+  .subscribe-column {
     border: 2px solid gree;
   }
   .subscribe-column input {
@@ -988,7 +983,7 @@ body.no-scroll {
   .subscribe-column button {
     padding: 15px;
     font-size: 14px;
-     width: 100%;
+    width: 100%;
   }
 
   .footer-social {
@@ -1010,18 +1005,17 @@ body.no-scroll {
   .page-title {
     margin-bottom: 1rem;
   }
-  .fa-user{
-  display:none;
-  font-size: 0px;
+  .fa-user {
+    display: none;
+    font-size: 0px;
+  }
+  .fa-magnifying-glass {
+    margin-left: 10px;
+    margin-right: 0px;
+    padding-right: 0px;
+  }
 
-}
-.fa-magnifying-glass{
-  margin-left: 10px;
-  margin-right: 0px;
-  padding-right: 0px;
-}
-
-.product-card .sizes span:last-child {
-  padding-right: 20px;
-}
+  .product-card .sizes span:last-child {
+    padding-right: 20px;
+  }
 }
