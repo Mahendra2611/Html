@@ -975,18 +975,20 @@ body.no-scroll {
     font-size: 14px;
     margin-bottom: 12px;
   }
-
+  .subscribe-column{
+    border: 2px solid gree;
+  }
   .subscribe-column input {
     padding: 12px;
     margin-bottom: 12px;
     font-size: 14px;
-    width: 80%;
+    width: 100%;
   }
 
   .subscribe-column button {
     padding: 15px;
     font-size: 14px;
-     width: 80%;
+     width: 100%;
   }
 
   .footer-social {
